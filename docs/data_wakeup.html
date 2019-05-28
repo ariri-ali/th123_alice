@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>起き上がり &mdash; ありりんごダム  ドキュメント</title>
+  <title>起き上がりデータ &mdash; ありりんごダム  ドキュメント</title>
   
 
   
@@ -85,7 +85,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="articles.html">旧ブログ記事</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="data_general.html">データ (全般)</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">起き上がり</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">起き上がりデータ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#f">ダウン+その場起き時間 [F]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dot">移動起き距離 [dot]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">移動起き時間 - その場起き時間 [F]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">その場起き 判別猶予 [F]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">移動起き上がり後存在判定発生 [F前]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">その場起き時間 [F]</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="data_crouch2stand.html">立ガ → 屈ガ移行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_rivermist.html">川霧フレーム</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_small_bound.html">小バウンド</a></li>
@@ -143,7 +151,7 @@
         
           <li><a href="data_general.html">データ (全般)</a> &raquo;</li>
         
-      <li>起き上がり</li>
+      <li>起き上がりデータ</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,7 +171,70 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>起き上がり<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>起き上がりデータ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>元になっている Google Spread Sheet は公開準備中…</p>
+<img alt="_images/wakeup_table.png" src="_images/wakeup_table.png" />
+<div class="section" id="f">
+<h2>ダウン+その場起き時間 [F]<a class="headerlink" href="#f" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>設置人形の種類を決める基準その1。</p></li>
+<li><p>アリスは人形設置猶予が大事なので、起き上がりモーションの時間だけでなくダウン時間を加味する必要がある。</p></li>
+<li><p>ダウン時間のキャラ差がある部分、ない部分についての詳細は :ref:&lt;data_small_bound&gt; を参照。</p></li>
+<li><p>表はアリスAAAA&gt;(2A&gt;)3A(3)&gt;9hj&gt;JA&gt;J8A 〆時のもの。</p></li>
+</ul>
+</div>
+<div class="section" id="dot">
+<h2>移動起き距離 [dot]<a class="headerlink" href="#dot" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>設置人形の種類を決める基準その2。</p></li>
+<li><p>距離毎に専用の構築が必要。たとえば、対衣玖で4C&gt;J2Cは見てから移動起きされて4Cをガードさせられない。</p></li>
+<li><p>基本的に短いほうがアリスにとって有利だが、各距離ごとにしっかりパターン構築できていればカバー可能。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>移動起き時間 - その場起き時間 [F]<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul>
+<li><p>前移動起き</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>人形設置後、打撃の重ね方を決める基準になる。</p></li>
+<li><p>移動起き距離が同じでも、この差が短いキャラ、長いキャラでは別のパターン構築が必要。</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>後ろ移動起き</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>差が大きいキャラの場合、その場起き読みに後ろ移動起きをされたときに別パターン構築が必要。</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>アリスDA〆の場合は相手の向きが反転するため、前移動起き≠中央移動起きであることに注意する。</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>その場起き 判別猶予 [F]<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>短いキャラほど、アリス側は一点読み起き攻めが必要。</p></li>
+<li><p>10+11=21F以上の相手は、理論上その場起きを見てから66JAが可能。6D&gt;JAは27F。実用的な高度の66JAも27F程度。</p></li>
+<li><p>30Fを超えているキャラは積極的に弱点として突いていきたい。</p></li>
+<li><p>10F~20F台のキャラは、66/6Dまで入れ込み&gt;移動起きをみてから方向転換という起き攻めなら両対応できるかも。</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>移動起き上がり後存在判定発生 [F前]<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>移動起きに対する歩きめくりのしやすさ。</p></li>
+<li><p>数字が小さいほど、アリスとの表裏の位置関係が起き上がり直前まで決まらないので、歩きめくりを通しやすい。</p></li>
+<li><p>体感で、15Fあたりからは工夫なしでのめくりは厳しい。</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>その場起き時間 [F]<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>これが短いキャラはぎりぎりまで移動起き上がり方向入力を受け付けるので、設置位置を見てから後出しで動かれる。(理論上は...。)</p></li>
+</ul>
+</div>
 </div>
 
 
