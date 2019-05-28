@@ -6,18 +6,16 @@
 このページについて
 ========================================
 
-.. link: 
-
 このページは、黄昏フロンティア様の `東方非想天則 超弩級ギニョルの謎を追え <https://www.tasofro.net/touhou123/index.html>`_ アリス・マーガトロイドの個人的な攻略記事を集積するページです。
 
-移行元ブログはこちら: `ありりんごダム跡地 <http://blog.livedoor.jp/ariri_ali/>`_ 
-
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-Indices and tables
-==================
+   articles
+   data_general
+   data_alice
+   misc
 
-* :ref:`genindex`
-* :ref:`search`
+.. okizeme
+.. countermeasure
