@@ -10,6 +10,7 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=source
 set BUILDDIR=_build
 set DOCDIR=..\\docs
+set DOCTREEDIR=%BUILDDIR%\\doctrees
 
 if "%1" == "" goto help
 
@@ -26,6 +27,8 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+echo Removing %DOCTREEDIR% ...
+rd /S /Q %DOCTREEDIR%
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
 echo Copying built html files from %BUILDDIR%\\html to %DOCDIR% ...
 copy "%BUILDDIR%\\html" %DOCDIR%
