@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Ariringo Dam'
+project = u'ありりんごダム'
 copyright = '2019, ariri'
 author = 'ariri'
 
