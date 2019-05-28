@@ -8,3 +8,8 @@
    :maxdepth: 1
    :caption: Contents:
 
+移行予定
+------------------------
+
+* `天候について(アリス視点) <http://blog.livedoor.jp/ariri_ali/archives/52734415.html>`_
+* `極光について(アリス視点) <http://blog.livedoor.jp/ariri_ali/archives/52734325.html>`_
