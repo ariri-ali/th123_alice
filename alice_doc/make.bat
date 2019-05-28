@@ -31,7 +31,7 @@ echo Removing %DOCTREEDIR% ...
 rd /S /Q %DOCTREEDIR%
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
 echo Copying built html files from %BUILDDIR%\\html to %DOCDIR% ...
-copy "%BUILDDIR%\\html" %DOCDIR%
+xcopy /Y /E "%BUILDDIR%\\html" %DOCDIR%
 goto end
 
 :help
